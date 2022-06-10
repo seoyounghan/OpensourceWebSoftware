@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>명함 제작소</title>
+  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/latest/css/bootstrap.min.css">
+
+
+<style>
+  /* 사이드바 래퍼 스타일 */
+  
+  #page-wrapper {
+    padding-left: 0px;
+    float: left;
+
+  }
+  #page-wrapper2 {
+    padding-right: : 0px;
+    float: right;
+  }
+  
+  #sidebar-wrapper {
+    position: fixed;
+    width: 250px;
+    height: 100%;
+    margin-left: -250px;
+    /*background: #000;*/
+    overflow-x: hidden;
+    overflow-y: auto;
+    background: white;
+
+  }
+  #sidebar-wrapper2 {
+    position: fixed;
+    width: 250px;
+    height: 100%;
+    margin-right: -250px;
+    /*background: #000;*/
+    overflow-x: hidden;
+    overflow-y: auto;
+    background: white;
+
+  }
+  
+  #page-content-wrapper {
+    width: 100%;
+    padding: 20px;
+  }
+  #page-content-wrapper2 {
+    width: 100%;
+    padding: 20px;
+  }
+
+  /* 사이드바 스타일 */
+  
+  .sidebar-nav,.sidebar-nav2 {
+    width: 250px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  
+  .sidebar-nav li,.sidebar-nav2 li {
+    text-indent: 1.5em;
+    line-height: 2.8em;
+  }
+
+  
+  .sidebar-nav li a,.sidebar-nav2 li a {
+    display: block;
+    text-decoration: none;
+    color: #000;
+  }
+  
+  .sidebar-nav li a:hover {
+    color: #fff;
+    background: rgba(255, 255, 255, 0.2);
+  }
+  
+  .sidebar-nav > .sidebar-brand {
+    font-size: 1.3em;
+    line-height: 3em;
+  }
+  .sidebar-nav2 > .sidebar-brand2 {
+    font-size: 1.3em;
+    line-height: 3em;
+  }
+  .button,.button2{
+    border: none;
+    color: black;
+    padding: 20px 80px;
+    text-align: center;
+    display: inline-block;
+    margin: 4px 2px;
+    cursor: pointer;
+    background-size:cover;
+
+}
+
+</style>
+
+
+</head>
+<body>
+
+  <div id="page-wrapper">
+  <!-- 사이드바 -->
+  <div id="sidebar-wrapper">
+    <ul class="sidebar-nav">
+      <li class="sidebar-brand">
+        <a href="#">배경 고르기</a>
+      </li>
+      <li><button class ="button" onclick="colorChange(0)" style="background:#c6e2ff"></button></li>
+      <li><button class ="button" onclick="colorChange(1)" style="background:#ed8a8a"></button></li>
+      <li><button class ="button" onclick="colorChange(2)" style="background:#d5ccde"></button></li>
+      <li><button class ="button" onclick="colorChange(3)" style="background:#eae7dc"></button></li>
+      <li><button class ="button" onclick="colorChange(4)" style="background:#f3f3f3"></button></li>
+      <li><button class ="button" onclick="colorChange(5)" style="background:#747474"></button></li>
+      <li><button class ="button" onclick="colorChange(6)" style="background:#a0d6b4"></button></li>
+      <li><button class ="button" onclick="colorChange(7)" style="background:#fddeca"></button></li>
+      <li><button class ="button" onclick="colorChange(8)" style="background:#bb7fe3"></button></li>
+      <li><button class ="button" onclick="colorChange(9)" style="background:#23c710"></button></li>
+      <li><button class ="button" onclick="bgChange(0)" style="background-image:url('./img/1.png');"></button></li>
+      <li><button class ="button" onclick="bgChange(1)" style="background-image:url('./img/2.jpeg');"></button></li>
+      <li><button class ="button" onclick="bgChange(2)" style="background-image:url('./img/3.png');"></button></li>
+      <li><button class ="button" onclick="bgChange(3)" style="background-image:url('./img/4.jpeg');"></button></li>
+      <li><button class ="button" onclick="bgChange(4)" style="background-image:url('./img/5.jpeg');"></button></li>
+      <li><button class ="button" onclick="bgChange(5)" style="background-image:url('./img/6.jpeg');"></button></li>
+
+    </ul>
+  </div>
+</div>
+  <!-- /사이드바 2-->
+<div id="page-wrapper2">
+  <!-- 사이드바 -->
+  <div id="sidebar-wrapper2">
+    <ul class="sidebar-nav2">
+      <li class="sidebar-brand2">
+        <a href="#">글씨 변경</a>
+      </li>
+      <li><button class ="button2" onclick="ltcolorChange(0)" style="background:#000000"></button></li>
+      <li><button class ="button2" onclick="ltcolorChange(1)" style="background:#696969"></button></li>
+      <li><button class ="button2" onclick="ltcolorChange(2)" style="background:#2F4F4F"></button></li>
+      <li><button class ="button2" onclick="ltcolorChange(3)" style="background:#663399"></button></li>
+      <li><button class ="button2" onclick="ltcolorChange(4)" style="background:#191970"></button></li>
+      <li><button class ="button2" onclick="ltcolorChange(5)" style="background:#006400"></button></li>
+      <li><button class ="button2" onclick="ltcolorChange(6)" style="background:#8B0000"></button></li>
+      <li><button class ="button2" onclick="ltcolorChange(7)" style="background:#8B4513"></button></li>
+      <li><button class ="button2" onclick="ltcolorChange(8)" style="background:#1E90FF"></button></li>
+      <li><button class ="button2" onclick="ltcolorChange(9)" style="background:#4B0082"></button></li>
+      <li><button class ="button2" onclick="ltChange(0)" style="background:#FFFFFF" ><a style="font-family: 'Black Han Sans'" >글씨체 변경</a></button></li>
+      <li><button class ="button2" onclick="ltChange(1)" style="background:#FFFFFF" ><a style="font-family: 'Do Hyeon'">글씨체 변경</a></button></li>
+      <li><button class ="button2" onclick="ltChange(2)" style="background:#FFFFFF" ><a style="font-family: 'Hahmlet'">글씨체 변경</a></button></li>
+      <li><button class ="button2" onclick="ltChange(3)" style="background:#FFFFFF" ><a style="font-family: 'Noto Serif KR'">글씨체 변경</a></button></li>
+      <li><button class ="button2" onclick="ltChange(4)" style="background:#FFFFFF" ><a style="font-family: 'Single Day'">글씨체 변경</a></button></li>
+    </ul>
+  </div>
+</div>
+
+
+  <nav id="nav2" style="padding-bottom: 7em">
+    <h1><img src="./img/logo.png"></h1>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="login.html">로그인</a></li>
+    </ul>
+  </nav>
+
+
+
+<!-- partial:index.partial.html -->
+<div id="id-card">
+  <div class="id-card material-ui-shadow">
+
+    <!-- \\ mugshot -->
+    <div class="id-card__mugshot">
+      <img src="http://www.travelcontinuously.com/wp-content/uploads/2018/04/empty-avatar.png" id="id-card-mugshot">
+    </div>
+    <!-- // mugshot -->
+    <!-- \\ foundation logo -->
+    <div class="id-card__logo logo">
+      <span class="logo__big">BO-SEGNER</span>
+      <span class="logo__small">foundation</span>
+    </div>
+    <!-- // foundation logo -->
+
+    <!-- \\ subject id -->
+    <div class="id-card__subject-id">
+
+    </div>
+    <!-- // subject id -->
+
+    <!-- \\ experiment banner -->
+    <div class="id-card__banner">
+      <span class="id-card__banner-text">EXPERIMENT S9.3a</span>
+    </div>
+    <!-- // experiment banner -->
+    
+
+    <!-- \\ details -->
+    <div class="id-card__details">
+      <div class="id-card__detail">
+        <span class="id-card__detail-label"></span>
+        <span class="id-card__detail-value" id="id-card-name">홍길동</span>
+      </div>
+      <div class="id-card__detail">
+        <span class="id-card__detail-label"></span>
+        <span class="id-card__detail-value" id="id-card-date-of-birth">2000/05/12</span>
+      </div>
+      <div class="id-card__detail">
+        <span class="id-card__detail-label"></span>
+        <span class="id-card__detail-value" id="id-card-number">010-0000-0000</span>
+      </div>
+    </div>
+    <!-- // details -->
+
+    <!-- \\ short details -->
+    <div class="id-card__details id-card__details--short">
+      <div class="id-card__detail">
+        <span class="id-card__detail-label"></span>
+        <span class="id-card__detail-value" id="id-card-gender">M</span>
+      </div>
+      <div class="id-card__detail">
+        <span class="id-card__detail-label"></span>
+        <span class="id-card__detail-value" id="id-card-company">충북대</span>
+      </div>
+    </div>
+    <!-- // short details -->
+
+  </div>
+</div>
+
+<div id="id-form" style="padding: 4em">
+  <!--<div class="id-form">
+    <div class="id-form__row id-form__row--inline">
+      <div class="id-form__label">이름</div>
+      <div class="id-form__input">
+        <input type="text" id="name" placeholder="이름">
+      </div>
+    </div>
+    <div class="id-form__row id-form__row--inline">
+      <div class="id-form__label">생일</div>
+      <div class="id-form__input">
+        <input type="text" id="date-of-birth" placeholder="생일">
+      </div>
+    </div>
+    <div></div>
+    <div class="id-form__row id-form__row--inline">
+      <div class="id-form__label">성별</div>
+      <div class="id-form__input">
+        <select id="gender">
+          <option value="M">남자</option>
+          <option value="F">여자</option>
+        </select>
+      </div>
+    </div>
+    <div class="id-form__row id-form__row--inline">
+      <div class="id-form__label">회사</div>
+      <div class="id-form__input">
+        <input type="text" id="company" placeholder="회사">
+      </div>
+    </div>-->
+    <div></div>
+    <div class="id-form__row id-form__row--inline">
+      <div class="id-form__label">사진</div>
+      <div class="id-form__input">
+        <input type="file" id="mugshot" accept="image/*">
+      </div>
+    </div>
+    <!--<div class="id-form__row id-form__row--inline">
+      <div class="id-form__label">전화번호</div>
+      <div class="id-form__input">
+        <input type="text" id="number" placeholder="010-0000-0000">
+      </div>
+    </div>-->
+  </div>
+</div>
+
+<button id="download-button"padding = 10em>Download</button>
+  <script src='https://rawgit.com/blueimp/JavaScript-MD5/master/js/md5.min.js'></script>
+<script src='http://html2canvas.hertzen.com/dist/html2canvas.min.js'></script>
+<script  src="./script.js"></script>
+<script src="//code.jquery.com/jquery.min.js"></script>
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/latest/js/bootstrap.min.js"></script>
+
+</body>
+</html>
